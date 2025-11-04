@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-import { Body, Controller, Get, Param, Patch, Post, Put } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Param, Patch, Post, Put } from '@nestjs/common';
 import { StudentService } from './student.service';
 import { Student } from './student.schema';
 
@@ -30,5 +30,10 @@ export class StudentController {
     @Put(':id')
     async updateStudent(@Body() data: Partial<Student>, @Param('id') id: string) {
         return this.studentService.updateStudent(id, data);
+    }
+
+    @Delete(':id')
+    async deleteStudent(@Param('id') id: string) {
+        return this.studentService.deleteStudentById(id);
     }
 }
