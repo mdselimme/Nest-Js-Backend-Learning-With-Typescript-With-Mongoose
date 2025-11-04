@@ -33,4 +33,16 @@ export class StudentService {
         }
         return updateStudent;
     }
+
+    async updateStudent(id: string, data: Partial<Student>): Promise<Student> {
+        const updateStudent = await this.studentModel.findByIdAndUpdate(id, {
+            name: data.name ?? null,
+            age: data.age ?? null,
+            email: data.email ?? null
+        }, { new: true, overwrite: true });
+        if (!updateStudent) {
+            throw new NotFoundException(`Student #${id} not found`);
+        }
+        return updateStudent;
+    }
 }
