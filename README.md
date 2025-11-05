@@ -1,9 +1,12 @@
 # Nest Js Learn With Mongoose And Typescript
 
-**Description**
+**Description:**
+
 In this repository I learn how to connect mongoDb and mongoose with nest js and do crud operation with mongoose. Learn relational concept one to one, one to many, many to many relation. Also learn transaction.
 
 ## File Structure:
+
+```
 
 ┣ 📂src
 ┃ ┣ 📂library
@@ -69,3 +72,5 @@ In this repository I learn how to connect mongoDb and mongoose with nest js and 
 ┣ 📜README.md
 ┣ 📜tsconfig.build.json
 ┗ 📜tsconfig.json
+
+```
