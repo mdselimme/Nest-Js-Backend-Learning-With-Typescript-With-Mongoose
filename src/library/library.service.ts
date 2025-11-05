@@ -22,4 +22,14 @@ export class LibraryService {
         const library = await this.libraryModel.create(libraryData);
         return library;
     }
+
+    async getLibraryAll(): Promise<Library[]> {
+        const library = await this.libraryModel.find().populate("books", "title author");
+        return library;
+    }
+
+    async getBookAll(): Promise<Book[]> {
+        const library = await this.bookModel.find().exec();
+        return library;
+    }
 }

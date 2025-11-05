@@ -8,7 +8,10 @@ export class Library extends Document {
     @Prop()
     name: string;
 
-    @Prop({ type: Types.ObjectId, ref: 'Book', default: [] })
+    @Prop({
+        type: [{ type: Types.ObjectId, ref: 'Book' }],
+        default: [],
+    })
     books: Types.ObjectId[];
 };
 
