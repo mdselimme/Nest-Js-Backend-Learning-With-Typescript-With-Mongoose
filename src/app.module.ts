@@ -6,11 +6,13 @@ import { ConfigModule } from '@nestjs/config';
 import { MongooseModule } from '@nestjs/mongoose';
 import { StudentModule } from './student/student.module';
 import { UserModule } from './user/user.module';
+import { ProductModule } from './product/product.module';
+import { LibraryModule } from './library/library.module';
 
 @Module({
   imports: [ConfigModule.forRoot({
     isGlobal: true,
-  }), MongooseModule.forRoot(`${process.env.MONGO_URI!}`), StudentModule, UserModule],
+  }), MongooseModule.forRoot(`${process.env.MONGO_URI!}`), StudentModule, UserModule, ProductModule, LibraryModule],
   controllers: [AppController],
   providers: [AppService],
 })
