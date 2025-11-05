@@ -8,11 +8,12 @@ import { StudentModule } from './student/student.module';
 import { UserModule } from './user/user.module';
 import { ProductModule } from './product/product.module';
 import { LibraryModule } from './library/library.module';
+import { ProjectModule } from './project/project.module';
 
 @Module({
   imports: [ConfigModule.forRoot({
     isGlobal: true,
-  }), MongooseModule.forRoot(`${process.env.MONGO_URI!}`), StudentModule, UserModule, ProductModule, LibraryModule],
+  }), MongooseModule.forRoot(`${process.env.MONGO_URI!}`), StudentModule, UserModule, ProductModule, LibraryModule, ProjectModule],
   controllers: [AppController],
   providers: [AppService],
 })
