@@ -4,6 +4,17 @@
 
 In this repository I learn how to connect mongoDb and mongoose with nest js and do crud operation with mongoose. Learn relational concept one to one, one to many, many to many relation. Also learn transaction.
 
+**Configuration:**
+
+- Configure .env file with this important data.
+
+```
+env
+PORT=
+MONGO_URI=
+JWT_SECRET_TOKEN=
+```
+
 ## File Structure:
 
 ```
